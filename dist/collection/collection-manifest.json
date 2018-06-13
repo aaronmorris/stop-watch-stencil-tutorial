@@ -1,0 +1,78 @@
+{
+  "components": [
+    {
+      "tag": "stop-watch",
+      "dependencies": [],
+      "componentClass": "StopWatchComponent",
+      "componentPath": "components/stop-watch/stop-watch.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/stop-watch/stop-watch.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "hours",
+          "type": "String",
+          "attr": "hours"
+        },
+        {
+          "name": "milliseconds",
+          "type": "String",
+          "attr": "milliseconds"
+        },
+        {
+          "name": "minutes",
+          "type": "String",
+          "attr": "minutes"
+        },
+        {
+          "name": "seconds",
+          "type": "String",
+          "attr": "seconds"
+        }
+      ]
+    },
+    {
+      "tag": "stop-watch-box",
+      "dependencies": [
+        "stop-watch"
+      ],
+      "componentClass": "StopWatchBoxComponent",
+      "componentPath": "components/stop-watch-box/stop-watch-box.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/stop-watch-box/stop-watch-box.css"
+          ]
+        }
+      },
+      "states": [
+        {
+          "name": "hours"
+        },
+        {
+          "name": "isTimerRunning"
+        },
+        {
+          "name": "milliseconds"
+        },
+        {
+          "name": "minutes"
+        },
+        {
+          "name": "seconds"
+        }
+      ]
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.9.1",
+    "typescriptVersion": "2.8.3"
+  },
+  "bundles": []
+}
